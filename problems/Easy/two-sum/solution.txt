@@ -1,0 +1,20 @@
+1/**
+2 * @param {number[]} nums
+3 * @param {number} target
+4 * @return {number[]}
+5 */
+6var twoSum = function(nums, target) {
+7    let map = {};  // value -> index
+8
+9    for (let i = 0; i < nums.length; i++) {
+10        let complement = target - nums[i];
+11
+12        if (map.hasOwnProperty(complement)) {
+13            return [map[complement], i];
+14        }
+15
+16        map[nums[i]] = i;
+17    }
+18};
+19
+20 
